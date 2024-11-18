@@ -1,0 +1,54 @@
+.flex-container {
+    display: flex; 
+    /* Vamos nos concentrar nos eixos vertical e horizontal, o flexbox trabalha com os dois, um vai ser o principal e o outro o secundário, inicialmente, assim que ativamos o flexbox ele coloca os elementos dentro do container no eixo horizontal (deitado/linha) e o secundário que é o eixo vertical são colunas (em pé) */
+
+    justify-content: center; 
+    /* Alinha horizontalmente (eixo de linha): flex-start (inicio), center (meio) e flex-end (fim) 
+    Podemos colocar espaço ao redor de todos com space-around, colocar espaço entre todos que é o space between e o space-evenly distribui os espaços de forma igual com o mesmo espaçamento entre os elementos e as bordas e linhas
+    */ 
+
+    align-items: center;
+    /* Enquanto o justify-content organiza os itens horizontalmente o align-itens faz o mesmo porém vertificalmente, então ele vai utilizar os mesmos valores flex-start, center e flex-end para alinhar no inicio, meio e fim, porém, verticalmente. O valor stretch estica o elemento para que ele ocupe o máximo de altura do elemento (essa é a propriedade padrão) */
+
+    gap: 0.2rem; /* Espaçamento entre os elementos */
+}
+
+.f-2 {
+    align-self: center;
+    /* O align-self vai funcionar da mesma forma que o align-items porém, essa propriedade é colocada no elemento para alinhar a si mesmo, por isso o nome self, com isso podemos pensar em vários tipos de layouts diferentes */
+}
+
+.flex-container2 {
+    display: flex;
+    gap: 0.2rem;
+
+    flex-direction: column;
+    /* O flex-direction muda a direção dos elementos, o padrão dele é em linha (row), mas podemos inverter a linha com row-reverse, colocar em colunas com column e inverter a coluna com collumn-reverse 
+    Quando ele está em column, significa que o justify content não vai alinhar mais horizontalmente e sim, verticalmente, ou seja, a direção vertivcal se torna a primaria e a horizontal se torna secundária
+    */
+    /* Por esse mesmo motivo agora o align-itens agora vai alinhar horizontalmente e o seu valor padrão também e stretch (esticar o elemento) */
+
+    align-items: center;
+    justify-content: center;
+}
+
+.f-5 {
+    align-self: center;
+    /* O align-self vai funcionar da mesma forma que o align-items porém, essa propriedade é colocada no elemento para alinhar a si mesmo, por isso o nome self (só que horizontalmente dessa vez), com isso podemos pensar em vários tipos de layouts diferentes */
+}
+
+.flex-container3 {
+    display: flex;
+    flex-direction: row;
+    gap: 0.2rem;
+}
+
+.flex-item {
+    flex-grow: 1; 
+    /* Usamos o flex-grow para fazermos os itens crescerem e pegar o espaço disponivel inteiro */   
+}
+
+.f-7 {
+    flex-shrink: 0;
+    /* O flex-shrink é o caminho inverso, definimos ele caso desejamos que apenas um item não diminua porque se colocarmos para todos ele tende não a não funcionar */
+}
